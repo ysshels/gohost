@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container,.sections,.section{
+            height: 100%;
+        }
+
+        html,body{
+            height: 100%;
+            /*overflow:hidden; !*横屏滑动**!*/
+        }
+        #section0,
+        #section1,
+        #section2,
+        #section3{
+            background-color: #000;
+            background-size: cover;
+            background-position: 50% 50%;
+            text-align: center;
+            color: white;
+        }
+        #section0{
+            background-image: url("img/48.jpg")
+        }
+        #section1{
+            background-image: url("img/111.jpg");
+        }
+        #section2{
+            background-image: url("img/222.jpg");
+        }
+        #section3{
+            background-image: url("img/333.jpg");
+        }
+        /*竖屏滑动 --要添加到每个section后面 ，每个宽度%是 及百分之几个*/
+        .left{
+            float: left;
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" style="width: 400%" data-PageSwith >
+        <div class="sections">
+            <div class="section left" id="section0">
+                <h3>hahah</h3>
+            </div>
+            <div class="section left"  id="section1">
+                <h3>eeeeeeee</h3>
+            </div>
+            <div class="section left" id="section2">
+                <h3>eeeeeeee</h3>
+            </div>
+            <div class="section left"  id="section3">
+                <h3>eeeeeeee</h3>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="js/pageSwitch.js"></script>
+    <script type="text/javascript">
+        $("#container").PageSwith({
+            dirction : "herzontal"
+        });
+
+
+        $("#container").PageSwith("init");
+
+
+    </script>
+</body>
+</html>
